@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: orders
+    description: A table of all coffee shop orders
+    columns:
+      - name: id
+        description: This is a unique identifier for coffee shop orders
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        description: Time order was made in UTC Time
+        tests:
+          - not_null
+      - name: customer_id
+        description: Unique identifier for coffee shop customer
+        tests:
+          - not_null
+      - name: total
+        description: Total price of a order. 
+        tests:
+          - not_null
+      - name: address 
+        description: Mailing address order is being sent to.
+        tests:
+          - not_null
+      - name: state
+        description: State order is being sent to.
+        tests:
+          - not_null
+      - name: zip
+        description: Zip order is being sent to.
+        tests:
+          - not_null
