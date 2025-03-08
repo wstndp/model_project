@@ -16,7 +16,7 @@ product_prices as (
 
 
 weekly_product_revenue as (
-    select
+  select
     date_trunc(orders.created_at,week) as week,
     products.category,
     sum(product_prices.price /100) as total_sales
