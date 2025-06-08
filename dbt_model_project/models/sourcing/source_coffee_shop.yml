@@ -19,6 +19,7 @@ sources:
               description: email of customer
               tests:
                 - not_null
+                - email_format
         - name: order_items
           description: A table of all items purchased in each order
           columns:
