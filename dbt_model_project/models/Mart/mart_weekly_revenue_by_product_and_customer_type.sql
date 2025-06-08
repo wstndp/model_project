@@ -12,8 +12,8 @@ final as (
     select 
         weekly_product_revenue.week as start_day_of_week,
         weekly_product_revenue.category as product_category,
-        customer_type.customer_type,
-        customer_type.total_sales
+        customer_type.customer_type as customer_type,
+        customer_type.total_sales as total_sales
     from weekly_product_revenue 
     left join customer_type on customer_type.week = weekly_product_revenue.week
     order by

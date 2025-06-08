@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: dbt_wstndp
+    tables:
+        - name: mart_weekly_revenue_by_product_and_customer_type
+          description: A table showing the weekly revenue by product and customer type
+          columns: #I only have columns needed to solve the custom test prompt in the first homework assignment
+            - name: total_sales
+              description: This is the a breakdown of weekly revenue by product and customer type
+              tests:
+                - total_above_zero
