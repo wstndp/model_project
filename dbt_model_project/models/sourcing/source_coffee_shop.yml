@@ -32,6 +32,9 @@ sources:
               description: Identifers for the order the item belongs to
               tests:
                 - not_null
+                - relationships:
+                    to: ref('orders')
+                    field: id
             - name: product_id
               description: Identifers for product being bought for that order
               tests:
